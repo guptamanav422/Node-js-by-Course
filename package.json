@@ -1,0 +1,24 @@
+{
+  "name": "node_js_by_course",
+  "version": "1.0.0",
+  "description": "",
+  "main": "http.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
+    "start-server": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guptamanav422/Node-js-by-Course.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guptamanav422/Node-js-by-Course/issues"
+  },
+  "homepage": "https://github.com/guptamanav422/Node-js-by-Course#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
+}

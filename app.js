@@ -24,7 +24,7 @@ function rqListener(req,res){
             body.push(chunk)
         });
 
-        req.on('end',()=>{
+        return req.on('end',()=>{
             const parsedBody=Buffer.concat(body).toString();
             const message=parsedBody.split("=")[1];
             // console.log(parsedBody);
@@ -41,7 +41,7 @@ function rqListener(req,res){
     res.write('<head> <title> My First Page </title> </head>')
     res.write('<body> <h1> Hello from Manav </body>')
     res.write('</html>')
-    res.end();
+    return res.end();
 }
 
 // rqListener always runs after every incoming request 
