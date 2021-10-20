@@ -5,12 +5,18 @@ const express=require('express');
 // function 
 const app=express();
 
-// executes for every incoming requests 
-app.use((req,res,next)=>{
-    console.log("in the middleware");
-    next(); // allows the request to continue to the next middleware
+app.use('/',(req,res,next)=>{
+    console.log("this always runs");
+    next();
 });
-app.use((req,res,next)=>{
+
+app.use('/add-product',(req,res,next)=>{
+    console.log("in the another middleware");
+    //  sending response
+    res.send(`<h1> Hello from add-product!`)
+});
+// executes for every incoming requests 
+app.use('/',(req,res,next)=>{
     console.log("in the another middleware");
     //  sending response
     res.send(`<h1> Hello from Express!`)
